@@ -19,6 +19,27 @@ public class Main {
 
         System.out.println("ФИО: " + second.getFio() + " возраст: " + second.getAge() + " вес: " + second.getWeight()
                 + " разряд: " + second.getCategory());
+
+        Vec2 v1 = new Vec2();
+        v1.setA(10);
+        v1.setB(-10);
+
+        System.out.println("a = " + v1.getA() + " b = " + v1.getB());
+
+        v1.setA(100);
+        v1.setB(-100);
+
+        System.out.println("a = " + v1.getA() + " b = " + v1.getB());
+
+        Vec2 v2 = new Vec2(100, -100);
+
+        System.out.println("a = " + v2.getA() + " b = " + v2.getB());
+
+        Vec2 sum = v1.sum(v2);
+        System.out.println("a = " + sum.getA() + " b = " + sum.getB());
+
+        Vec2 sub = v1.sub(v2);
+        System.out.println("a = " + sub.getA() + " b = " + sub.getB());
     }
 
 }
