@@ -7,7 +7,11 @@ public class Vec2 {
     }
 
     public Vec2(int a, int b) {
-        this.a = a; this.b = b;
+        Vec2 v = new Vec2();
+        v.setA(a);
+        v.setB(b);
+        this.a = v.getA();
+        this.b = v.getB();
     }
 
     private boolean isCorrect (int value) {
@@ -31,7 +35,7 @@ public class Vec2 {
     }
 
     public Vec2 sum (Vec2 v1) {
-        return new Vec2((v1.getA() + this.a), (v1.getB() + this.b)); 
+        return new Vec2((this.a + v1.getA()), (this.b + v1.getB())); 
     }
 
     public Vec2 sub (Vec2 v1) {

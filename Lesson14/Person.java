@@ -9,10 +9,10 @@ public class Person {
     }
 
     public Person(String fio, int age, int weight, int category) {
-        this.fio = fio;
-        this.age = age;
-        this.weight = weight;
-        this.category = category;
+        Person p = new Person();
+        p.setFio(fio);
+        p.setAgeWeigth(age, weight);
+        p.setCategory(category);
     }
 
     private boolean isCorrect(int arg) {

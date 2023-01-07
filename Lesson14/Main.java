@@ -35,11 +35,26 @@ public class Main {
 
         System.out.println("a = " + v2.getA() + " b = " + v2.getB());
 
+        v2.setA(20);
+        v2.setB(-20);
+
+        System.out.println("a = " + v2.getA() + " b = " + v2.getB());
+
         Vec2 sum = v1.sum(v2);
         System.out.println("a = " + sum.getA() + " b = " + sum.getB());
 
         Vec2 sub = v1.sub(v2);
         System.out.println("a = " + sub.getA() + " b = " + sub.getB());
+
+        Lib lib = new Lib();
+        Book book = new Book();
+        book.setTitle("War and peace");
+        book.setAuthor("Lev Tolstoy");
+        book.setPublication(2021);
+        book.setPages(800);
+
+        lib.addLib(book);
+        lib.printLib();
     }
 
 }
